@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
 
 namespace CatWorx.BadgeMaker
 {
@@ -6,10 +7,9 @@ namespace CatWorx.BadgeMaker
     {
     static void Main(string[] args)
     {
-        string greeting = " " + "Hello";
-        greeting = greeting + " " + "World";
-        Console.WriteLine($"greeting: {greeting}");
-        Console.WriteLine("greeting: {0}", greeting);
+        float side = 3.14F;
+        float area = side * side;
+        Console.WriteLine(area);
     }
     }
 }
