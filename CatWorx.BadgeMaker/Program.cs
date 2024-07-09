@@ -9,6 +9,7 @@ class Program
     static List<string> GetEmployees()
     {
         List<string> employees = new List<string>();
+
         while (true)
         {
 
@@ -20,7 +21,11 @@ class Program
             {
                 break;
             }
+
+            // Employee Instance
+            Employee currentEmployee = new Employee();
             employees.Add(input);
+
         }
         return employees;
     }
