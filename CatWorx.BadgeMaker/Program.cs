@@ -1,22 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
 
 namespace CatWorx.BadgeMaker
 {
     class Program
     {
-    static void Main(string[] args)
-    {
-        List<string> employees = new List<string>() { "adam", "amy" };
+        static void Main(string[] args)
+        {
+            List<string> employees = new List<string>();
 
-        employees.Add("barbara");
-        employees.Add("billy");
+            while (true)
+            {
+                Console.WriteLine("Please enter a name: (leave empty to exit): ");
+                string input = Console.ReadLine() ?? "";
 
-        for (int i = 0; i < employees.Count; i++)
-{
-        Console.WriteLine(employees[i]);
-}
-    }
+                if (input == "")
+                {
+                    break;
+                }
+                employees.Add(input);
+            }
+            for (int i = 0; i < employees.Count; i++)
+            {
+                Console.WriteLine(employees[i]);
+            }
+        }
     }
 }
