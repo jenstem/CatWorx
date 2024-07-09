@@ -7,9 +7,10 @@ namespace CatWorx.BadgeMaker
     {
     static void Main(string[] args)
     {
-        bool isCold = true;
-        Console.WriteLine(isCold ? "drink" : "add ice");
-        Console.WriteLine(!isCold ? "drink" : "add ice");
+        string stringNum = "2";
+        int intNum = Convert.ToInt32(stringNum);
+        Console.WriteLine(intNum);
+        Console.WriteLine(intNum.GetType());
     }
     }
 }
