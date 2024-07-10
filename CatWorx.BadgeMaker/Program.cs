@@ -23,8 +23,8 @@ class Program
             }
 
             // Employee Instance
-            Employee currentEmployee = new Employee();
-            employees.Add(input);
+            Employee currentEmployee = new Employee(input, "Smith");
+            employees.Add(currentEmployee.GetFullName());
 
         }
         return employees;
