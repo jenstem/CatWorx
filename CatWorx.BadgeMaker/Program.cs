@@ -15,15 +15,22 @@ class Program
 
             Console.WriteLine("Please enter a name: (leave empty to exit): ");
 
-            string input = Console.ReadLine() ?? "";
+            string firstName = Console.ReadLine() ?? "";
 
-            if (input == "")
+            if (firstName == "")
             {
                 break;
             }
 
+            Console.Write("Enter last name: ");
+            string lastName = Console.ReadLine() ?? "";
+            Console.Write("Enter ID: ");
+            int id = Int32.Parse(Console.ReadLine() ?? "");
+            Console.Write("Enter Photo URL:");
+            string photoUrl = Console.ReadLine() ?? "";
+
             // Employee Instance
-            Employee currentEmployee = new Employee(input, "Smith");
+            Employee currentEmployee = new Employee(firstName, lastName, id, photoUrl);
             employees.Add(currentEmployee);
 
         }
