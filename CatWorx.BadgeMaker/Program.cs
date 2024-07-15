@@ -9,6 +9,8 @@ class Program
     static List<Employee> GetEmployees()
     {
         List<Employee> employees = new List<Employee>();
+        Util.PrintEmployees(employees);
+        Util.MakeCSV(employees);
 
         while (true)
         {
