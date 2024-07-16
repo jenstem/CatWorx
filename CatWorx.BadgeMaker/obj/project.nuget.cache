@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "4bOyhmJ1dFmla0P7P2H2emMpILGWokT2pIR72e2GdVi/wXr8MZcWvvFgbwanh+G4OPCP2mziqnnGeS/QXZrhTg==",
+  "dgSpecHash": "JsZvNvUTEC3S9SCUCPZ6PATFCu+DJ1Ncp0o6Wp8Ft4y8NNoVDqD8v/HKcATwvsJjZSXKEJMhXGTwShj9HuHfwQ==",
   "success": true,
   "projectFilePath": "/Users/administrator/Desktop/CatWorx/CatWorx.BadgeMaker/CatWorx.BadgeMaker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/administrator/.nuget/packages/skiasharp/2.88.0/skiasharp.2.88.0.nupkg.sha512",
+    "/Users/administrator/.nuget/packages/skiasharp.nativeassets.macos/2.88.0/skiasharp.nativeassets.macos.2.88.0.nupkg.sha512",
+    "/Users/administrator/.nuget/packages/skiasharp.nativeassets.win32/2.88.0/skiasharp.nativeassets.win32.2.88.0.nupkg.sha512",
+    "/Users/administrator/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -40,8 +40,9 @@ class Program
     static void Main(string[] args)
     {
         List<Employee> employees = GetEmployees();
-        Util.PrintEmployees(employees);
+        employees = GetEmployees();
         Util.MakeCSV(employees);
+        Util.MakeBadges(employees);
     }
 }
 }
