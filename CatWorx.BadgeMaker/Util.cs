@@ -59,7 +59,7 @@ namespace CatWorx.BadgeMaker
             {
                 for (int i = 0; i < employees.Count; i++)
                 {
-                    SKImage photo = SKImage.FromEncodedData(await client.GetByteArrayAsync(employees[i].GetPhotoUrl()));
+                    SKImage photo = SKImage.FromEncodedData(await client.GetStreamAsync(employees[i].GetPhotoUrl()));
                     SKImage background = SKImage.FromEncodedData(File.OpenRead("badge.png"));
 
                     SKBitmap badge = new SKBitmap(BADGE_WIDTH, BADGE_HEIGHT);
@@ -81,12 +81,14 @@ namespace CatWorx.BadgeMaker
                     paint.Color = SKColors.Black;
                     canvas.DrawText(employees[i].GetFullName(), BADGE_WIDTH / 2f, EMPLOYEE_NAME_Y, paint);
 
-                    paint.Color = SKColors.Black;
+                    paint.Typeface = SKTypeface.FromFamilyName("Courier");
                     canvas.DrawText(employees[i].GetId().ToString(), BADGE_WIDTH / 2f, EMPLOYEE_ID_Y, paint);
 
                     SKImage finalImage = SKImage.FromBitmap(badge);
                     SKData data = finalImage.Encode();
-                    data.SaveTo(File.OpenWrite("data/employeeBadge.png"));
+
+                    string template = "data/employee_{0}_Badge.png";
+                    data.SaveTo(File.OpenWrite(string.Format(template, employees[i].GetId())));
                 }
             }
         }
