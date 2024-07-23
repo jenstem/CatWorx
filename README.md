@@ -36,8 +36,8 @@ WHEN the app starts, I am asked, 'Press "Y" to start entering employees'\
 THEN I enter "n" because I do NOT want to enter each employee manually\
 WHEN I enter "n" into the terminal\
 THEN the employees' data is populated and the security badges are created\
-WHEN I the badges have finished being created\
-THEN I see the app finish running
+WHEN I see that the badges have finished being created\
+THEN I see the app has finished running
 ##
 
 <a id='installation'></a>
